@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi primera aplicacion con Flask</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}" />
+  </head>
+  <body>
+    <main class="contenedor">
+      <p class="introduccion">Esta es mi primera aplicación Web utilizando Python y Flask.</p>
+
+      <form action="/saludar" method="POST">
+        <section class="campo-principal" aria-labelledby="nombre-label">
+          <label id="nombre-label" for="nombre">Dame tu nombre:</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            autocomplete="name"
+            required
+          />
+        </section>
+
+        <section aria-labelledby="pasatiempos-titulo">
+          <h1 id="pasatiempos-titulo">Selecciona tus pasatiempos</h1>
+
+          <div class="pasatiempos">
+            <fieldset class="categoria">
+              <legend>Deportivos</legend>
+              <label><input type="checkbox" name="pasatiempos" value="Fútbol" /> <span>Fútbol</span></label>
+              <label><input type="checkbox" name="pasatiempos" value="Béisbol" /> <span>Béisbol</span></label>
+              <label><input type="checkbox" name="pasatiempos" value="Ciclismo" /> <span>Ciclismo</span></label>
+              <label><input type="checkbox" name="pasatiempos" value="Caminar" /> <span>Caminar</span></label>
+            </fieldset>
+
+            <fieldset class="categoria">
+              <legend>Culturales</legend>
+              <label><input type="checkbox" name="pasatiempos" value="Lectura" /> <span>Lectura</span></label>
+              <label><input type="checkbox" name="pasatiempos" value="Música" /> <span>Música</span></label>
+              <label><input type="checkbox" name="pasatiempos" value="Pintura" /> <span>Pintura</span></label>
+              <label><input type="checkbox" name="pasatiempos" value="Teatro" /> <span>Teatro</span></label>
+            </fieldset>
+
+            <fieldset class="categoria">
+              <legend>Esparcimiento</legend>
+              <label><input type="checkbox" name="pasatiempos" value="Cine" /> <span>Cine</span></label>
+              <label><input type="checkbox" name="pasatiempos" value="Videojuegos" /> <span>Videojuegos</span></label>
+              <label><input type="checkbox" name="pasatiempos" value="Viajar" /> <span>Viajar</span></label>
+              <label><input type="checkbox" name="pasatiempos" value="Series" /> <span>Series</span></label>
+            </fieldset>
+
+            <fieldset class="categoria">
+              <legend>Sociales</legend>
+              <label><input type="checkbox" name="pasatiempos" value="Reuniones" /> <span>Reuniones</span></label>
+              <label><input type="checkbox" name="pasatiempos" value="Fiestas" /> <span>Fiestas</span></label>
+              <label><input type="checkbox" name="pasatiempos" value="Convivir" /> <span>Convivir</span></label>
+              <label><input type="checkbox" name="pasatiempos" value="Redes sociales" /> <span>Redes sociales</span></label>
+            </fieldset>
+          </div>
+        </section>
+
+        <section class="descripcion" aria-labelledby="gusta-label">
+          <label id="gusta-label" for="me_gusta">En pocas palabras, ¿qué te gusta hacer?</label>
+          <textarea
+            id="me_gusta"
+            name="me_gusta"
+            maxlength="100"
+            rows="7"
+            placeholder="Máximo 100 caracteres"
+            required
+          ></textarea>
+        </section>
+
+        <button type="submit">Saludar</button>
+      </form>
+    </main>
+  </body>
+</html>

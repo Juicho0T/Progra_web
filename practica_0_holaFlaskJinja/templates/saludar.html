@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saludo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}" />
+  </head>
+  <body>
+    <main class="contenedor resultado">
+      <section class="tarjeta-resultado">
+        <h1>¡Hola {{ nombre }}!</h1>
+        <p>Bienvenido a tu primera aplicación Web con Flask y Jinja.</p>
+
+        <h2>Tus pasatiempos son:</h2>
+        {% if pasatiempos %}
+          <ul>
+            {% for pasatiempo in pasatiempos %}
+              <li>{{ pasatiempo }}</li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <p class="sin-datos">No seleccionaste pasatiempos.</p>
+        {% endif %}
+
+        <h2>Lo que más te gusta hacer:</h2>
+        <p class="respuesta">{{ me_gusta }}</p>
+
+        <a class="enlace-regresar" href="{{ url_for('inicio') }}">Regresar</a>
+      </section>
+    </main>
+  </body>
+</html>
