@@ -105,3 +105,15 @@ Render no puede usar el MySQL de `localhost` de tu computadora. Para que la
 aplicación funcione en línea, crea la base `comercio` y la tabla `clientes` en
 un servidor MySQL accesible desde Internet y coloca sus datos en las variables
 de Render. No publiques la contraseña en el repositorio.
+
+Una opción compatible para una práctica es TiDB Cloud Starter. Al crear la
+instancia, usa su endpoint público y coloca en Render el host, usuario,
+contraseña y nombre de base que muestra TiDB. En TiDB Cloud Starter el puerto
+suele ser `4000` y debes activar:
+
+```text
+MYSQL_SSL=true
+MYSQL_SSL_CA=/etc/ssl/certs/ca-certificates.crt
+```
+
+Ejecuta el SQL de este README en la base remota antes de abrir la aplicación.

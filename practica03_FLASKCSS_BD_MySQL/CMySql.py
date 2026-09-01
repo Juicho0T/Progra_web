@@ -9,12 +9,29 @@ import mysql.connector
 
 
 def f_conectar():
+    configuracion = {
+        "host": os.getenv("MYSQL_HOST", "localhost"),
+        "port": int(os.getenv("MYSQL_PORT", "3306")),
+        "user": os.getenv("MYSQL_USER", "root"),
+        "password": os.getenv("MYSQL_PASSWORD", "root"),
+        "database": os.getenv("MYSQL_DATABASE", "comercio")
+    }
+
+    # Algunos proveedores de MySQL exigen TLS para conexiones públicas.
+    # Se activa desde Render con MYSQL_SSL=true.
+    ssl_activo = os.getenv("MYSQL_SSL", "false").lower() in (
+        "1", "true", "yes"
+    )
+
+    if ssl_activo:
+        configuracion["ssl_verify_cert"] = True
+        configuracion["ssl_verify_identity"] = True
+        ssl_ca = os.getenv("MYSQL_SSL_CA", "")
+        if ssl_ca and os.path.isfile(ssl_ca):
+            configuracion["ssl_ca"] = ssl_ca
+
     conexion = mysql.connector.connect(
-        host=os.getenv("MYSQL_HOST", "localhost"),
-        port=int(os.getenv("MYSQL_PORT", "3306")),
-        user=os.getenv("MYSQL_USER", "root"),
-        password=os.getenv("MYSQL_PASSWORD", "root"),
-        database=os.getenv("MYSQL_DATABASE", "comercio")
+        **configuracion
     )
 
     return conexion
