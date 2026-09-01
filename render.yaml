@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: practica03-flask-mysql
+    runtime: python
+    plan: free
+    rootDir: practica03_FLASKCSS_BD_MySQL
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: MYSQL_HOST
+        sync: false
+      - key: MYSQL_PORT
+        value: "3306"
+      - key: MYSQL_USER
+        sync: false
+      - key: MYSQL_PASSWORD
+        sync: false
+      - key: MYSQL_DATABASE
+        value: comercio

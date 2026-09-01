@@ -21,6 +21,9 @@ practica03_FLASKCSS_BD_MySQL/
         └── estilos.css
 ```
 
+El archivo `.env.example` muestra las variables de conexión necesarias. El
+archivo `.env` no debe subirse a GitHub.
+
 ## Base de datos MySQL
 
 En MySQL Workbench o en el cliente MySQL local ejecuta:
@@ -48,8 +51,9 @@ CREATE TABLE clientes (
 );
 ```
 
-La conexión de la práctica usa `localhost`, usuario `root`, contraseña
-`root` y la base `comercio`, tal como se solicita en el documento.
+La conexión usa por defecto `localhost`, usuario `root`, contraseña `root` y la
+base `comercio`, tal como se solicita en el documento. En línea se reemplazan
+esos valores mediante variables de entorno.
 
 ## Ejecución
 
@@ -57,6 +61,14 @@ La conexión de la práctica usa `localhost`, usuario `root`, contraseña
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
+python app.py
+```
+
+Si tu contraseña de MySQL no es `root`, configura la variable antes de iniciar
+la aplicación:
+
+```powershell
+$env:MYSQL_PASSWORD="tu_contrasena_mysql"
 python app.py
 ```
 
@@ -77,3 +89,19 @@ http://127.0.0.1:5000/clientes
 - `/`: muestra el formulario de registro.
 - `/mostrar_cliente`: recibe el formulario por `POST`, guarda el cliente en MySQL y muestra la información registrada.
 - `/clientes`: consulta y muestra los clientes almacenados en MySQL.
+
+## Publicar en GitHub y Render
+
+El archivo `render.yaml` ya configura Render para esta práctica. En Render
+puedes crear un Blueprint desde este repositorio y completar las variables
+`MYSQL_HOST`, `MYSQL_USER` y `MYSQL_PASSWORD`. También puedes crear un Web
+Service manualmente con estos valores:
+
+- Root Directory: `practica03_FLASKCSS_BD_MySQL`
+- Build Command: `pip install -r requirements.txt`
+- Start Command: `gunicorn app:app`
+
+Render no puede usar el MySQL de `localhost` de tu computadora. Para que la
+aplicación funcione en línea, crea la base `comercio` y la tabla `clientes` en
+un servidor MySQL accesible desde Internet y coloca sus datos en las variables
+de Render. No publiques la contraseña en el repositorio.

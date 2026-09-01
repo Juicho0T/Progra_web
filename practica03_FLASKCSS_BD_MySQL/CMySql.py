@@ -1,3 +1,5 @@
+import os
+
 import mysql.connector
 
 
@@ -8,10 +10,11 @@ import mysql.connector
 
 def f_conectar():
     conexion = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="admin",
-        database="comercio"
+        host=os.getenv("MYSQL_HOST", "localhost"),
+        port=int(os.getenv("MYSQL_PORT", "3306")),
+        user=os.getenv("MYSQL_USER", "root"),
+        password=os.getenv("MYSQL_PASSWORD", "root"),
+        database=os.getenv("MYSQL_DATABASE", "comercio")
     )
 
     return conexion
