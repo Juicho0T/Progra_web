@@ -4,7 +4,7 @@ services:
     runtime: python
     plan: free
     rootDir: PRACTICA05_DjangoModelViewTemplate
-    buildCommand: pip install -r requirements.txt && python manage.py collectstatic --no-input && python manage.py migrate
+      buildCommand: pip install -r requirements.txt && python manage.py collectstatic --no-input && python manage.py migrate && python manage.py crear_datos_demo
     startCommand: gunicorn practica05_DjangoMVT.wsgi:application
     envVars:
       - key: DJANGO_DEBUG

@@ -94,16 +94,28 @@ Proporciona el nombre de usuario, correo y contraseña que quieras utilizar.
 
 3. En **Usuarios**, crea los usuarios de prueba de la guía:
 
-   - `rpizarroanalista` con contraseña `probando`
-   - `rpizarroduenio` con contraseña `probando`
-   - `rpizarrovendedor` con contraseña `probando`
-   - `rpizarroespecialista` con contraseña `probando`
-   - `rpizarrocliente` con contraseña `probando`
+   - `rpizarroanalista`
+   - `rpizarroduenio`
+   - `rpizarrovendedor`
+   - `rpizarroespecialista`
+   - `rpizarrocliente`
 
 4. En **Perfil usuarios**, relaciona cada usuario con su rol.
 
 Al entrar a `/login/`, la aplicación autentica el usuario, muestra una alerta
 JavaScript y enseña el rol asignado.
+
+Para crear los usuarios demo sin utilizar la Shell de Render, agrega la
+variable privada `DJANGO_DEMO_PASSWORD` en Render y ejecuta el comando:
+
+```text
+python manage.py crear_datos_demo
+```
+
+El comando crea los cinco usuarios indicados en la guía y sus perfiles. La
+contraseña se lee desde la variable privada y no se guarda en GitHub. También
+puedes definir `DJANGO_ADMIN_USERNAME` y `DJANGO_ADMIN_PASSWORD` para crear
+automáticamente un superusuario.
 
 ## Instancia en la nube con Render
 
@@ -112,7 +124,7 @@ El archivo `render.yaml` deja configurado el servicio. En Render selecciona
 manual, usa:
 
 - Root Directory: `PRACTICA05_DjangoModelViewTemplate`
-- Build Command: `pip install -r requirements.txt && python manage.py collectstatic --no-input && python manage.py migrate`
+- Build Command: `pip install -r requirements.txt && python manage.py collectstatic --no-input && python manage.py migrate && python manage.py crear_datos_demo`
 - Start Command: `gunicorn practica05_DjangoMVT.wsgi:application`
 - Plan: Free
 
