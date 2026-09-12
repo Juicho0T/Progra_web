@@ -49,6 +49,12 @@ class Command(BaseCommand):
                 if creado:
                     usuario.password = make_password(demo_password)
                     usuario.save(update_fields=["password"])
+                else:
+                    # Los usuarios demo usan la contraseña privada configurada
+                    # en Render para que puedan probarse sin utilizar la Shell.
+                    usuario.password = make_password(demo_password)
+                    usuario.is_active = True
+                    usuario.save(update_fields=["password", "is_active"])
 
                 perfil, _ = PerfilUsuario.objects.get_or_create(
                     usuario=usuario,
