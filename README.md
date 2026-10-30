@@ -1,4 +1,16 @@
-# RetroFix - Plataforma de taller y tienda de videojuegos
+<div align="center">
+
+# RetroFix
+
+### Todas las generaciones. La misma pasión por jugar.
+
+**[Abrir aplicación](http://retrofix.site.je/index.php)** · **[Iniciar sesión](http://retrofix.site.je/index.php?p=login)** · **[Manual técnico](retrofix/README.md)** · **[Guía de operación](docs/OPERACION.md)**
+
+PHP 8 · MySQL / MariaDB · HTML · CSS · JavaScript
+
+![Portada de RetroFix](docs/images/retrofix-inicio.jpg)
+
+</div>
 
 Proyecto académico de Desarrollo Web. RetroFix permite gestionar reparaciones de consolas de todas las generaciones, compraventa de videojuegos y solicitudes de suscripciones Xbox y PlayStation.
 
@@ -19,6 +31,31 @@ Proyecto académico de Desarrollo Web. RetroFix permite gestionar reparaciones d
 - Planes de suscripción Xbox y PlayStation con entrega de demostración.
 - Pagos simulados, comprobantes internos, reportes y registro de actividad.
 - Interfaz adaptable con fondo negro, superficies grises y acciones azules.
+
+## Organización del repositorio
+
+```text
+Progra_web/
+├── README.md                         # Presentación e índice
+├── docs/                             # Operación e imágenes
+├── retrofix/                         # Aplicación final PHP + MySQL
+├── practica_0_holaFlaskJinja/          # Introducción a Flask/Jinja
+├── practica_02_FlaskJinjaCSS_BD/       # Flask con base de datos
+├── practica03_FLASKCSS_BD_MySQL/       # Flask con MySQL
+├── PRACTICA05_DjangoModelViewTemplate/ # Django MVT
+└── render.yaml                       # Despliegue de Flask 03
+```
+
+### Prácticas anteriores
+
+| Proyecto | Documentación |
+| --- | --- |
+| Flask y Jinja: introducción | [Práctica inicial](practica_0_holaFlaskJinja/README.md) |
+| Flask, CSS y base de datos | [Práctica 02](practica_02_FlaskJinjaCSS_BD/README.md) |
+| Flask con MySQL | [Práctica 03](practica03_FLASKCSS_BD_MySQL/README.md) |
+| Django: Model, View y Template | [Práctica 05](PRACTICA05_DjangoModelViewTemplate/README.md) |
+
+Las prácticas conservan sus rutas para mantener las referencias y configuraciones existentes. RetroFix es la aplicación final destacada en este repositorio.
 
 ## Tecnología e instalación
 

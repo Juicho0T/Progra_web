@@ -1,0 +1,5 @@
+# Material local, entregables y archivos privados.
+/tmp/
+/output/
+/*.hex
+/*.zip
