@@ -3,3 +3,11 @@
 /output/
 /*.hex
 /*.zip
+
+# Copias locales conservadas; las versiones publicadas están en codex/archivo-practicas.
+/practica_0_holaFlaskJinja/
+/practica_02_FlaskJinjaCSS_BD/
+/practica03_FLASKCSS_BD_MySQL/
+/PRACTICA05_DjangoModelViewTemplate/
+/render.yaml
+/jaja
