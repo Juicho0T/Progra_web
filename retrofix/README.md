@@ -1,6 +1,15 @@
 # RetroFix · Juega. Otra vez.
 
-Aplicación académica local para reparar consolas de todas las generaciones, comprar y vender videojuegos y gestionar solicitudes de suscripciones Xbox y PlayStation. PHP 8, PDO, MySQL/MariaDB, HTML, CSS y JavaScript; sin frameworks ni dependencias externas.
+Aplicación académica para reparar consolas de todas las generaciones, comprar y vender videojuegos y gestionar solicitudes de suscripciones Xbox y PlayStation. PHP 8, PDO, MySQL/MariaDB, HTML, CSS y JavaScript; sin frameworks ni dependencias externas.
+
+## Aplicación publicada
+
+- [Abrir RetroFix](http://retrofix.site.je/index.php)
+- [Iniciar sesión](http://retrofix.site.je/index.php?p=login)
+
+Alojamiento: InfinityFree, con PHP y MySQL. La estructura y los datos iniciales se importaron desde phpMyAdmin. La conexión se configura mediante `config/local.php` en el alojamiento, fuera del repositorio. Las contraseñas de evaluación se comparten en privado.
+
+Los pasos siguientes permiten ejecutar otra copia en un equipo local; no es necesario encender XAMPP para visitar la versión publicada.
 
 ## Abrir en este equipo
 

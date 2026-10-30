@@ -7,7 +7,8 @@ Proyecto académico de Desarrollo Web. RetroFix permite gestionar reparaciones d
 - [Código y documentación de RetroFix](retrofix/)
 - [Manual de instalación, operación y características](retrofix/README.md)
 - [Cuentas de demostración y roles](retrofix/USUARIOS_DE_PRUEBA.md)
-- **Aplicación pública:** pendiente de despliegue. El enlace local `http://127.0.0.1:8080/` sólo funciona en el equipo que ejecuta el servidor.
+- **Aplicación pública:** [Abrir RetroFix](http://retrofix.site.je/index.php), alojada en InfinityFree con PHP y MySQL.
+- **Acceso:** [Iniciar sesión](http://retrofix.site.je/index.php?p=login). Las claves de evaluación se entregan en privado; no se publican en este repositorio.
 
 ## Características
 
@@ -43,7 +44,7 @@ Las funciones de vendedor del negocio corresponden al administrador.
 
 Los pagos, reembolsos y entregas digitales son simulados. No se procesan cobros bancarios ni se activan suscripciones reales. Los comprobantes no son fiscales.
 
-GitHub Pages no ejecuta PHP ni MySQL: la aplicación requiere alojamiento compatible y una base de datos para disponer de un enlace público funcional. El archivo `render.yaml` de la raíz pertenece a una práctica Flask anterior, no al despliegue de RetroFix.
+El código se conserva en GitHub y la aplicación se aloja en InfinityFree con su base de datos MySQL. GitHub Pages no ejecuta PHP ni MySQL. El archivo `render.yaml` de la raíz pertenece a una práctica Flask anterior, no al despliegue de RetroFix.
 
 La carpeta `retrofix` excluye del control de versiones las sesiones, los archivos subidos, respaldos y la configuración local. Las contraseñas no se publican: una instalación nueva genera claves aleatorias y las muestra únicamente en su consola de instalación.
 
