@@ -1,1 +1,54 @@
-hola
+# RetroFix - Plataforma de taller y tienda de videojuegos
+
+Proyecto académico de Desarrollo Web. RetroFix permite gestionar reparaciones de consolas de todas las generaciones, compraventa de videojuegos y solicitudes de suscripciones Xbox y PlayStation.
+
+## Enlaces de la entrega
+
+- [Código y documentación de RetroFix](retrofix/)
+- [Manual de instalación, operación y características](retrofix/README.md)
+- [Cuentas de demostración y roles](retrofix/USUARIOS_DE_PRUEBA.md)
+- **Aplicación pública:** pendiente de despliegue. El enlace local `http://127.0.0.1:8080/` sólo funciona en el equipo que ejecuta el servidor.
+
+## Características
+
+- Portada, servicios, catálogo con filtros y detalle de videojuegos.
+- Registro, inicio de sesión y perfiles con roles de cliente, especialista y administrador.
+- Solicitudes de reparación, cotizaciones versionadas, autorización, citas, asignación y bitácora técnica.
+- Bolsa, pedidos, inventario y compra de juegos usados a clientes.
+- Planes de suscripción Xbox y PlayStation con entrega de demostración.
+- Pagos simulados, comprobantes internos, reportes y registro de actividad.
+- Interfaz adaptable con fondo negro, superficies grises y acciones azules.
+
+## Tecnología e instalación
+
+PHP 8, PDO, MySQL/MariaDB, HTML, CSS y JavaScript. No requiere frameworks.
+
+1. Descarga o clona este repositorio.
+2. Inicia MySQL/MariaDB y configura la base de datos siguiendo el [manual](retrofix/README.md#instalación-nueva).
+3. Ejecuta el instalador `php app/install.php` desde la carpeta `retrofix`.
+4. En Windows con XAMPP, ejecuta `retrofix/Iniciar-RetroFix.cmd` y deja la ventana abierta.
+5. Abre `http://127.0.0.1:8080/`.
+
+## Operación por rol
+
+| Rol | Función |
+| --- | --- |
+| Cliente | Solicitar reparaciones, revisar cotizaciones, consultar avances, comprar juegos y ofrecer usados. |
+| Especialista | Consultar reparaciones asignadas y registrar diagnóstico, trabajo, piezas y avances. |
+| Administrador | Gestionar solicitudes, presupuestos, agenda, asignaciones, ventas, inventario, planes, pagos y usuarios. |
+
+Las funciones de vendedor del negocio corresponden al administrador.
+
+## Alcance de la demostración
+
+Los pagos, reembolsos y entregas digitales son simulados. No se procesan cobros bancarios ni se activan suscripciones reales. Los comprobantes no son fiscales.
+
+GitHub Pages no ejecuta PHP ni MySQL: la aplicación requiere alojamiento compatible y una base de datos para disponer de un enlace público funcional. El archivo `render.yaml` de la raíz pertenece a una práctica Flask anterior, no al despliegue de RetroFix.
+
+La carpeta `retrofix` excluye del control de versiones las sesiones, los archivos subidos, respaldos y la configuración local. Las contraseñas no se publican: una instalación nueva genera claves aleatorias y las muestra únicamente en su consola de instalación.
+
+## Equipo
+
+Ana Alvarado, Luis Becerra y Kevin Castorena. Docente: Ruben Pizarro. Grupo: 8Y.
+
+Este repositorio también conserva otras prácticas de la asignatura en carpetas independientes.

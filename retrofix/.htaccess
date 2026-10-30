@@ -1,0 +1,4 @@
+Options -Indexes
+<FilesMatch "(?i)(\.sql$|\.md$|^dev-router\.php$|^\.)">
+Require all denied
+</FilesMatch>
