@@ -18,3 +18,58 @@ label{color:#c8c8cd}input,select,textarea{background:#111;color:#f5f5f7;border-c
 footer{background:#111;color:#a1a1a6}.footer-inner{padding-top:60px;padding-bottom:40px}.footer-bottom{border-color:#38383b}.footer-inner a:hover{color:#fff}
 @media(max-width:740px){#navegacion{top:58px;background:#111;border-color:#38383b}.hero{padding-top:52px}.hero h1{font-size:clamp(42px,9vw,64px)}.hero-copy{font-size:18px}.hero-media{height:300px;width:100%;margin:12px auto}.hero-caption{font-size:11px;line-height:1.5;text-align:left}.section{padding-top:64px;padding-bottom:64px}.service-grid{grid-template-columns:1fr}.feature-card{min-height:410px}.service-grid .feature-card:last-child{min-height:360px}.feature-card h3{font-size:30px}.feature-card p{font-size:15px}.mini-controller .controller-scene{transform:scale(.6);left:0}.section-title p{font-size:16px}.page-shell{padding-top:40px}.page-heading>p:last-child{font-size:18px}.card{padding:24px}.button{font-size:15px}.form-grid{grid-template-columns:1fr}.about h2{font-size:40px}}
 @media print{body{background:#fff;color:#000;color-scheme:light}.card,.subtle,.page-shell,.receipt{background:#fff;color:#000}.facts strong,.price,p,label,td,th{color:#222}input,select,textarea{background:#fff;color:#000}.admin-navigation{display:none}}
+/* Legibilidad y navegación en pantallas pequeñas. */
+@media screen {
+  .button:not(.ghost):not(.dark):not(.danger):hover {
+    background: #086bd1;
+  }
+
+  input, select, textarea {
+    border-color: #747479;
+  }
+
+  .table-wrap {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .admin-navigation {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .admin-navigation a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+  }
+
+  .admin-navigation a:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .form-grid, .split, .detail-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  input, select, textarea {
+    font-size: 16px;
+  }
+
+  .filters > label {
+    flex: 1 1 130px;
+  }
+
+  .record > div {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .record .badge {
+    white-space: normal;
+  }
+}
