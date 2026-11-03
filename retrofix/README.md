@@ -4,8 +4,8 @@ Aplicación académica para reparar consolas de todas las generaciones, comprar 
 
 ## Aplicación publicada
 
-- [Abrir RetroFix](http://retrofix.site.je/index.php)
-- [Iniciar sesión](http://retrofix.site.je/index.php?p=login)
+- [Abrir RetroFix](https://retrofix.site.je/index.php)
+- [Iniciar sesión](https://retrofix.site.je/index.php?p=login)
 
 Alojamiento: InfinityFree, con PHP y MySQL. La estructura y los datos iniciales se importaron desde phpMyAdmin. La conexión se configura mediante `config/local.php` en el alojamiento, fuera del repositorio. Las contraseñas de evaluación se comparten en privado.
 

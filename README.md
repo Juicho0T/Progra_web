@@ -4,7 +4,7 @@
 
 ### Todas las generaciones. La misma pasión por jugar.
 
-**[Abrir aplicación](http://retrofix.site.je/index.php)** · **[Iniciar sesión](http://retrofix.site.je/index.php?p=login)** · **[Manual técnico](retrofix/README.md)** · **[Guía de operación](docs/OPERACION.md)**
+**[Abrir aplicación](https://retrofix.site.je/index.php)** · **[Iniciar sesión](https://retrofix.site.je/index.php?p=login)** · **[Manual técnico](retrofix/README.md)** · **[Guía de operación](docs/OPERACION.md)**
 
 PHP 8 · MySQL / MariaDB · HTML · CSS · JavaScript
 
@@ -19,8 +19,8 @@ Proyecto académico de Desarrollo Web. RetroFix permite gestionar reparaciones d
 - [Código y documentación de RetroFix](retrofix/)
 - [Manual de instalación, operación y características](retrofix/README.md)
 - [Cuentas de demostración y roles](retrofix/USUARIOS_DE_PRUEBA.md)
-- **Aplicación pública:** [Abrir RetroFix](http://retrofix.site.je/index.php), alojada en InfinityFree con PHP y MySQL.
-- **Acceso:** [Iniciar sesión](http://retrofix.site.je/index.php?p=login). Las claves de evaluación se entregan en privado; no se publican en este repositorio.
+- **Aplicación pública:** [Abrir RetroFix](https://retrofix.site.je/index.php), alojada en InfinityFree con PHP y MySQL.
+- **Acceso:** [Iniciar sesión](https://retrofix.site.je/index.php?p=login). Las claves de evaluación se entregan en privado; no se publican en este repositorio.
 
 ## Características
 

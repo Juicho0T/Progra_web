@@ -1,6 +1,6 @@
 # Guía de operación de RetroFix
 
-[Inicio del repositorio](../README.md) · [Abrir aplicación](http://retrofix.site.je/index.php) · [Manual técnico](../retrofix/README.md)
+[Inicio del repositorio](../README.md) · [Abrir aplicación](https://retrofix.site.je/index.php) · [Manual técnico](../retrofix/README.md)
 
 ## Acceso y roles
 
